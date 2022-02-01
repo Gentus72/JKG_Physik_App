@@ -103,14 +103,14 @@ class Slider {
   on(e) {
     this.isDragging = true
     this.onX = e.clientX
-    this.slider.classList.add('is-grabbing')
+    this.slider.classList.add('grabbing');
   }
   
   off(e) {
     this.snap()
     this.isDragging = false
     this.offX = this.currentX
-    this.slider.classList.remove('is-grabbing')
+    this.slider.classList.remove('grabbing');
   }
   
   closest() {
