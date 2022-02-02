@@ -1,4 +1,10 @@
 
+//  Klassem
+classes = [
+  '6', '7', '8', '9', '10', '11', '12'
+]
+
+
 const easing = {
     easeOutCubic: function(pos) {
       return (Math.pow((pos-1), 3) +1);
@@ -13,7 +19,7 @@ const easing = {
       let defaults = {
         el: '', // dom 
         type: 'infinite', // infinite 无限滚动，normal 非无限 
-        count: 20, // 圆环规格，圆环上选项个数，必须设置 4 的倍数
+        count: 8, // 圆环规格，圆环上选项个数，必须设置 4 的倍数
         sensitivity: 0.8, // 灵敏度
         source: [], // 选项 {value: xx, text: xx}
         value: null,
@@ -26,7 +32,7 @@ const easing = {
   
       this.halfCount = this.options.count / 2;
       this.quarterCount = this.options.count / 4;
-      this.a = this.options.sensitivity * 10; // 滚动减速度
+      this.a = this.options.sensitivity * 200; // 滚动减速度
       this.minV = Math.sqrt(1 / this.a); // 最小初速度
       this.selected = this.source[0];
   
@@ -49,7 +55,7 @@ const easing = {
         touchend: null
       };
   
-      this.itemHeight = this.elems.el.offsetHeight * 3 / this.options.count; // 每项高度
+      this.itemHeight = 57; // 每项高度
       this.itemAngle = 360 / this.options.count; // 每项之间旋转度数
       this.radius = this.itemHeight / Math.tan(this.itemAngle * Math.PI / 180); // 圆环半径 
   
@@ -100,6 +106,7 @@ const easing = {
   
     _touchmove(e, touchData) {
       let eventY = e.clientY || e.touches[0].clientY;
+//here
       touchData.yArr.push([eventY, new Date().getTime()]);
       if (touchData.length > 5) {
         touchData.unshift();

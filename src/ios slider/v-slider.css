@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+
+.select-wrap {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #ddd;
+}
+
+.select-wrap:before, .select-wrap:after {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 50%;
+}
+
+.select-wrap .select-options {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    margin: 0 auto;
+    display: block;
+    transform: translateZ(-150px); 
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.select-wrap .select-options .select-option {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.highlight {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    background-color: rgb(63, 63, 63);
+    font-size: 15vh;
+}
+
+.highlight-list {
+    position: absolute;
+    width: 100%;
+}
+
+/* date */
+.date-selector {
+    position: absolute;
+    font-family: 'Cabin' sans-serif;
+    perspective: 2000px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 40%;
+    height: 75%;
+    overflow: hidden;
+}
+
+.date-selector > div {
+    flex: 1;
+}
+
+.date-selector .select-wrap {
+    font-size: 0;
+}
+
+.date-selector .highlight {
+    font-size: 3vh;
+}
+
+.select-wrap .select-options .select-option:nth-child(1) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(2) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(3) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(4) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(5) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(6) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(7) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(8) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(9) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(10) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(11) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(12) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(13) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(14) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(15) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(16) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(17) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(18) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(19) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(20) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(21) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(22) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(23) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(24) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(25) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(26) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(27) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(28) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(29) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(30) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(31) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(32) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(33) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(34) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(35) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(36) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(37) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(38) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(39) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(40) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(41) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(42) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(43) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(44) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(45) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(46) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(47) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(48) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(49) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(50) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(51) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(52) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(53) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(54) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(55) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(56) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(57) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(58) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(59) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(60) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(61) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(62) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(63) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(64) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(65) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(66) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(67) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(68) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(69) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(70) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(71) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(72) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(73) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(74) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(75) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(76) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(77) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(78) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(79) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(80) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(81) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(82) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(83) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(84) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(85) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(86) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(87) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(88) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(89) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(90) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(91) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(92) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(93) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(94) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(95) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(96) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(97) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(98) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(99) {
+    transform: translateZ(150px);
+}
+.select-wrap .select-options .select-option:nth-child(100) {
+    transform: translateZ(150px);
+}

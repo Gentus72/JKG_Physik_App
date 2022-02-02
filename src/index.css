@@ -60,6 +60,7 @@ a {
 	display: flex;
 	align-self: center;
 	margin: auto;
+	overflow: clip;
 }
 
 .heading:hover {
