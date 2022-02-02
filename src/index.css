@@ -2,28 +2,33 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
   
-  body, html{
+body, html {
 	height: 100%;
-  }
+}
   
-  body{
+body {
 	display: flex;
 	align-items: center;
 	position: relative;
 	overflow: hidden;
 	background-color: #1e1e1e;
 	user-select: none;
-  }
+}
   
-  img{
+img {
 	display: block;
 	width: 100%;
 	height: auto;
-  }
+}
+
+a {
+	z-index: 100;
+	position: relative;
+}
   
 #header {
 	position: absolute;
@@ -45,76 +50,91 @@
 }
 
 .heading {
-	display: flex;
-	font-size: calc(1.5vw + 1.5vh);
-	height: 100%;
-	font-family: 'Cabin', sans-serif;
-	color: white;
-	background-color: #2a2b2a;
 	width: 40%;
+	height: 75%;
+	font-size: calc(1.5vw + 1.5vh);
+	font-family: 'Cabin', sans-serif;
+	background-color: #222222;
+	color: white;
+	border-radius: 10px;
+	display: flex;
+	align-self: center;
 	margin: auto;
 }
 
 .heading:hover {
-	background-color: #363636;
+	background-color: #1d1d1d;
 }
 
 .header-side-div {
 	position: relative;
-  width: 20vh;
-  min-width: 120px;
+  	width: 20vh;
+  	min-width: 120px;
 	height: 100%;
-  display: flex;
+  	display: flex;
+}
+
+.header-side-div-inner {
+	position: relative;
+	display: flex;
+	width: 80%;
+	height: 80%;
+	border-radius: 10px;
+	align-self: center;
+	margin: auto;
+
 }
 
 .filter-img {
 	width: 15vh;
-  height: 15vh;
-  align-self: center;
-  margin: auto;
-  translate: translateY(-5%);
+  	height: 15vh;
+  	align-self: center;
+  	margin: auto;
+  	translate: translateY(-5%);
+}
+
+.account {
+	margin-right: 1.5%;
 }
 
 .account-img {
-  width: 15vh;
-  height: 15vh;
-  align-self: center;
-  margin: auto;
+  	width: 15vh;
+  	height: 15vh;
+  	align-self: center;
+  	margin: auto;
+	padding: 10px;
 }
 
-.header-side-div:hover {
+.header-side-div-inner:hover {
 	background-color: #363636;
 }
 
-.filter:hover {
-	background-color: #363636;
-}
-
-  .slider{
+.slider{
 	position: relative;
 	top: 7%;
 	height: 70%;
 	width: 100%;
+	padding: 0px 20px;
 	cursor: grab;
-  }
+}
 
-  .grabbing {
+.grabbing {
 	cursor: grabbing;
-  }
+}
 
-  .grab {
-	  cursor: grab;
-  }
+.grab {
+	cursor: grab;
+}
   
-  .slider__inner{
+.slider__inner{
 	position: absolute;
 	top: 37%;
 	left: 0;
 	height: 100%;
 	pointer-events: none;
-  }
+}
   
-  .slide{
+.slide{
 	display: flex;
 	align-items: center;
 	text-align: center;
@@ -122,25 +142,25 @@
 	position: absolute;
 	top: 0;
 	transform: translateY(-50%);
-	width: 25vw;
-  max-width: 350px;
+	width: 20vw;
 	height: 65vh;
 	padding: 1rem 1rem 1rem 1rem;
-  }
+	cursor: pointer;
+}
 
 .slide:hover {
 	background-color: white;
 }
 
 .slide-img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  top: 20%;
-  border-radius: 2vh;
+  	width: 100%; 
+  	height: 100%; 
+  	object-fit: cover; 
+  	top: 20%;
+  	border-radius: 2vh;
 }
   
-  .slide__bg{
+.slide__bg{
 	position: absolute;
 	top: 10%;
 	left: 10%;
@@ -149,7 +169,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-  }
+}
 
 .slide-title {
 	font-family: 'Cabin', sans-serif;
@@ -168,22 +188,22 @@
 	padding: 10px 0px;
 }
   
-  .text{
+.text{
 	position: absolute;
 	color: #666;
 	left: 4rem;
 	bottom: 3rem;
-  }
+}
   
-  .cursor-wrap{
+.cursor-wrap{
 	position: fixed;
 	top: 0;
 	left: 0;
 	pointer-events: none;
-  }
+}
   
-  .cursor{
+.cursor{
 	position: fixed;
 	top: -30px;
 	left: -30px;
-  }
+}
