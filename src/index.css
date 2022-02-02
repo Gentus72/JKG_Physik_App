@@ -94,7 +94,7 @@ a {
 }
 
 .account {
-	margin-right: 1.5%;
+	margin-right: 2vw;
 }
 
 .account-img {
@@ -105,11 +105,24 @@ a {
 	padding: 10px;
 }
 
-.header-side-div-inner:hover {
-	background-color: #363636;
+.fl-apply {
+	margin-right: -12.5vw;
 }
 
-.slider{
+.fl-apply-img {
+	width: 15vh;
+	height: 15vh;
+	align-self: center;
+	margin: auto;
+  padding: 10px;
+}
+
+.header-side-div-inner:hover {
+	background-color: #363636;
+	max-height: 225px;
+}
+
+.slider {
 	position: relative;
 	top: 7%;
 	height: 70%;
@@ -206,4 +219,100 @@ a {
 	position: fixed;
 	top: -30px;
 	left: -30px;
+}
+
+/* ofl = open filter list */
+
+.ocfl {
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+.ofl-header {
+	animation-name: ofl-header;
+}
+
+.ofl-heading {
+	animation-name: ofl-heading;
+}
+
+.ofl-slider {
+	animation-name: ofl-slider;
+}
+
+.ofl-acc {
+	animation-name: ofl-acc;
+}
+
+.cfl-header {
+	animation-name: cfl-header;
+}
+
+.cfl-heading {
+	animation-name: cfl-heading;
+}
+
+.cfl-slider {
+	animation-name: cfl-slider;
+}
+
+.cfl-acc {
+	animation-name: cfl-acc;
+}
+
+@keyframes ofl-header {
+	to {
+		height: 100%;
+	}
+}
+
+@keyframes ofl-heading {
+	to {
+		height: 90%;
+	}
+}
+
+@keyframes ofl-slider {
+	to {
+		top: 120%;
+	}
+}
+
+@keyframes ofl-acc {
+	to {
+		position: absolute;
+		margin-left: 100%;
+	}
+} 
+
+@keyframes cfl-header {
+	from {
+		height: 100%;
+	}
+
+	to {
+		height: 20%;
+	}
+}
+
+@keyframes cfl-heading {
+	from {
+		height: 90%;
+	}
+
+	to {
+		height: 75%;
+	}
+}
+
+@keyframes cfl-slider {
+	from {
+		top: 120%;
+	}
+
+	to {
+		top: 7%;
+	}
 }
