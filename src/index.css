@@ -50,17 +50,25 @@ a {
 }
 
 .heading {
-	width: 40%;
+  width: 90%;
 	height: 75%;
-	font-size: calc(1.5vw + 1.5vh);
+  font-size: calc(1.5vw + 1.5vh);
 	font-family: 'Cabin', sans-serif;
 	background-color: #222222;
 	color: white;
 	border-radius: 10px;
-	display: flex;
-	align-self: center;
-	margin: auto;
-	overflow: clip;
+  overflow: clip;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  margin: auto;
 }
 
 .heading:hover {
@@ -69,10 +77,10 @@ a {
 
 .header-side-div {
 	position: relative;
-  	width: 20vh;
-  	min-width: 120px;
+  width: 20vh;
+  min-width: 120px;
 	height: 100%;
-  	display: flex;
+  display: flex;
 }
 
 .header-side-div-inner {
@@ -207,4 +215,18 @@ a {
 	position: fixed;
 	top: -30px;
 	left: -30px;
+}
+
+.anim-filter-list-popup {
+  animation-name: ofl-heading;
+}
+
+@keyframes ofl-heading {
+  from {
+    height: 100%;
+  }
+
+  to {
+    height: 100vh;
+  }
 }

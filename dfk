@@ -1,0 +1,44 @@
+[33mcommit 149f218f46b7d00d7227560fc5bfe2f7b24465f7[m[33m ([m[1;36mHEAD -> [m[1;32mslideshow[m[33m)[m
+Author: stickw <60480277+Gentus72@users.noreply.github.com>
+Date:   Wed Feb 2 02:04:30 2022 +0100
+
+    last commit for tonight
+
+[33mcommit 5d948b6c8ea94f78955d5844ae4be36a8a50b5fa[m[33m ([m[1;31morigin/slideshow[m[33m)[m
+Author: stickw <gentus72@gmail.com>
+Date:   Wed Feb 2 01:20:18 2022 +0100
+
+    quick savestate #001
+
+[33mcommit 0eab0cffebc4f64ff67b691a9bf5780dd2e8f55f[m
+Author: stickw <gentus72@gmail.com>
+Date:   Tue Feb 1 21:47:23 2022 +0100
+
+    polish (save, gonna do some more)
+
+[33mcommit b57c165f194a0d9e130421759947509e92d4230b[m
+Author: stickw <gentus72@gmail.com>
+Date:   Mon Jan 31 23:18:11 2022 +0100
+
+    added header & added slide titles
+
+[33mcommit ac038214f76f3b3b8e03d6c0cbc17779f31d5647[m
+Author: stickw <gentus72@gmail.com>
+Date:   Mon Jan 31 21:59:33 2022 +0100
+
+    Remade Slider
+
+[33mcommit ad4e860117bb5dfeec16f52ec16d7a109d9aa569[m
+Author: stickw <60480277+Gentus72@users.noreply.github.com>
+Date:   Sun Jan 30 00:06:59 2022 +0100
+
+    Added Slideshow Feature (poc)
+    
+    poc = prove of concept, meaning
+    no styling, just functionality
+
+[33mcommit 2105b4d28d507f1c9570a2dda14ebeec1974573a[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: stickw <karl.georg.friedrich@gmail.com>
+Date:   Sat Jan 29 12:31:06 2022 +0100
+
+    created blank electron app

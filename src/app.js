@@ -1,3 +1,5 @@
+var ofl_heading = document.getElementById("heading");
+
 function _getClosest(item, array, getDiff) {
     var closest,
         diff;
