@@ -49,7 +49,7 @@ class Slider {
     
     this.rAF = undefined
     
-    this.sliderWidth = 0
+    this.sliderHeight = 0
     
     this.onX = 0
     this.offX = 0
@@ -60,7 +60,7 @@ class Slider {
     this.min = 0
     this.max = 0
 
-    this.centerX = window.innerWidth / 2
+    this.centerX = window.innerHeight / 2
   }
   
   bind() {
@@ -71,8 +71,8 @@ class Slider {
     const bounds = this.slides[0].getBoundingClientRect()
     const slideWidth = bounds.width
 
-    this.sliderWidth = this.slidesNumb * slideWidth
-    this.max = -(this.sliderWidth - window.innerWidth)
+    this.sliderHeight = this.slidesNumb * slideWidth
+    this.max = -(this.sliderHeight - window.innerHeight)
     
     this.slides.forEach((slide, index) => {
       slide.style.left = `${index * slideWidth}px`
@@ -81,7 +81,7 @@ class Slider {
   
   setPos(e) {
     if (!this.isDragging) return
-    this.currentX = this.offX + ((e.clientX - this.onX) * this.opts.speed)
+    this.currentX = this.offX + ((e.clientY - this.onX) * this.opts.speed)
     this.clamp()
   }
 
@@ -94,17 +94,17 @@ class Slider {
     this.lastX = Math.floor(this.lastX * 100) / 100 
 
     const sd = this.currentX - this.lastX
-    const acc = sd / window.innerWidth
+    const acc = sd / window.innerHeight
     let velo =+ acc
     
-    this.sliderInner.style.transform = `translate3d(${this.lastX}px, 0, 0) skewX(${velo * this.opts.velocity}deg)`
+    this.sliderInner.style.transform = `translate3d(0, ${this.lastX}px, 0) skewX(${velo * this.opts.velocity}deg)`
 
     this.requestAnimationFrame()
   }
   
   on(e) {
     this.isDragging = true
-    this.onX = e.clientX
+    this.onX = e.clientY
     this.slider.classList.add('grabbing');
   }
   
