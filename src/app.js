@@ -119,19 +119,6 @@ class Slider {
         this.offX = this.currentX
         this.slider.classList.remove('grabbing');
     }
-
-    toggle_ofl() {
-        //ofl = open filter list
-        
-        if (ofl_isOpen) {
-            ofl_off();
-        }
-        else {
-            ofl_on();
-        }
-
-        ofl_isOpen = !ofl_isOpen;
-    }
     
     closest() {
     const numbers = []
@@ -173,7 +160,6 @@ class Slider {
         this.slider.addEventListener('mousedown', this.on, false)
         this.slider.addEventListener('mouseup', this.off, false)
         this.slider.addEventListener('mouseleave', this.off);
-        header_selection.addEventListener('mousedown', this.toggle_ofl);
         
         window.addEventListener('resize', this.resize, false)
     }
@@ -185,7 +171,6 @@ class Slider {
         this.slider.removeEventListener('mousedown', this.on, false)
         this.slider.removeEventListener('mouseup', this.off, false)
         this.slider.removeEventListener('mouseleave', this.off);
-        header_selection.removeEventListener('mousedown', this.toggle_ofl);
     }
     
     resize() {
@@ -206,22 +191,3 @@ class Slider {
 
 const slider = new Slider()
 slider.init()
-
-function ofl_on() {
-    header_selection.classList.remove('cfl-heading');
-    header_selection.classList.add('ofl-heading');
-    header.classList.remove('cfl-header');
-    header.classList.add('ofl-header');
-    _slider.classList.remove('cfl-slider');
-    _slider.classList.add('ofl-slider');
-    acc_img.classList.add('ofl-acc-img');
-}
-
-function ofl_off() {
-    header_selection.classList.remove('ofl-heading');
-    header_selection.classList.add('cfl-heading');
-    header.classList.remove('ofl-header');
-    header.classList.add('cfl-header');
-    _slider.classList.remove('ofl-slider');
-    _slider.classList.add('cfl-slider');
-}
