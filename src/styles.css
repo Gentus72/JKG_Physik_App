@@ -1,811 +1,318 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+  
+body, html {
+	height: 100%;
+}
+  
 body {
-  background-color: #1e1e1e;
+	display: flex;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	background-color: #1e1e1e;
+	user-select: none;
+}
+  
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+a {
+	z-index: 100;
+	position: relative;
+}
+  
+#header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 20%;
+	display: flex;
+	background: #2a2b2a;
+  min-height: 110px;
+	text-align: center;
+  }
+
+.header-item {
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+  vertical-align:middle;
+	margin: auto;
 }
 
 .heading {
-   color: purple;
-   font-family: Arial, Helvetica, sans-serif;
- margin: left;
- max-width: 25rem;
- padding: 2rem;
+	width: 40%;
+	height: 75%;
+	font-size: calc(1.5vw + 1.5vh);
+	font-family: 'Cabin', sans-serif;
+	background-color: #222222;
+	color: white;
+	border-radius: 10px;
+	display: flex;
+	align-self: center;
+	margin: auto;
 }
 
-.links {
-   background-color: aliceblue;
-   font-family: Arial, Helvetica, sans-serif;
-   margin: left;
-   max-width: 25rem;
-   padding: 2rem
+.heading:hover {
+	background-color: #1d1d1d;
 }
 
-.rf-cards-scroller-platter {
-
-   width: 100%;
-   vertical-align: top;
-   display: inline-flex;
-   padding-top: 10px;
-   padding-bottom: 40px;
-
+.header-side-div {
+	position: relative;
+  	width: 20vh;
+  	min-width: 120px;
+	height: 100%;
+  	display: flex;
 }
-[data-core-scroller] {
 
-   white-space: nowrap;
-
-}
-body, button, input, select, textarea {
-
-   font-synthesis: none;
-   -moz-font-feature-settings: "kern";
-   direction: ltr;
-   text-align: left;
+.header-side-div-inner {
+	position: relative;
+	display: flex;
+	width: 80%;
+	height: 80%;
+	border-radius: 10px;
+	align-self: center;
+	margin: auto;
 
 }
 
-html {
-
-   --r-globalnav-height: 44px;
-   --r-globalnav-segmentbar-height: 0px;
-   --r-globalnav-viewport-large-min-width: 1024px;
-   --r-globalnav-viewport-large-max-width: 1441px;
-   --r-globalnav-viewport-large-query: (min-width: 1024px);
-   --r-globalnav-viewport-medium-min-width: 834px;
-   --r-globalnav-viewport-medium-max-width: 1023px;
-   --r-globalnav-viewport-medium-query: (max-width: 1023px);
-   --r-globalnav-viewport-small-min-width: 420px;
-   --r-globalnav-viewport-small-max-width: 833px;
-   --r-globalnav-viewport-small-query: (max-width: 833px);
-   --r-globalnav-viewport-xsmall-min-width: 320px;
-   --r-globalnav-viewport-xsmall-max-width: 419px;
-   --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-   --r-globalnav-segmentbar-background: #272729;
-   --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-   --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-
-}
-html {
-
-   font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-   font-size: 106.25%;
-   quotes: "“" "”";
-
+.filter-img {
+	width: 15vh;
+  	height: 15vh;
+  	align-self: center;
+  	margin: auto;
+  	translate: translateY(-5%);
 }
 
-   .rf-ccard-img-full {
-     width: 100%;
-     height: 100%;
-     -o-object-fit: cover;
-     object-fit: cover;
-     display: block;
-   }
-   .rf-ccard-content {
-     white-space: normal;
-   }
-   html.js .as-util-relatedlink {
-     cursor: pointer;
-   }
-   [data-core-scroller] {
-     white-space: nowrap;
-   }
-   body, button, input, select, textarea {
-     font-synthesis: none;
-     -moz-font-feature-settings: "kern";
-     direction: ltr;
-     text-align: left;
-   }
-   body {
-     font-size: 17px;
-     line-height: 1.47059;
-     font-weight: 400;
-     letter-spacing: -.022em;
-     font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-     color: #1d1d1f;
-     font-style: normal;
-   }
-   html {
-     --r-globalnav-height: 44px;
-     --r-globalnav-segmentbar-height: 0px;
-     --r-globalnav-viewport-large-min-width: 1024px;
-     --r-globalnav-viewport-large-max-width: 1441px;
-     --r-globalnav-viewport-large-query: (min-width: 1024px);
-     --r-globalnav-viewport-medium-min-width: 834px;
-     --r-globalnav-viewport-medium-max-width: 1023px;
-     --r-globalnav-viewport-medium-query: (max-width: 1023px);
-     --r-globalnav-viewport-small-min-width: 420px;
-     --r-globalnav-viewport-small-max-width: 833px;
-     --r-globalnav-viewport-small-query: (max-width: 833px);
-     --r-globalnav-viewport-xsmall-min-width: 320px;
-     --r-globalnav-viewport-xsmall-max-width: 419px;
-     --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-     --r-globalnav-segmentbar-background: #272729;
-     --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-     --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-   }
-   html {
-     font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-     font-size: 106.25%;
-     quotes: "“" "”";
-   }
+.account {
+	margin-right: 2vw;
+}
 
-   .rf-ccard-40 .rf-ccard-content {
-         width: 400px;
-       }
-       .rf-ccard-content.rf-ccard-content-withfullimg {
-         flex-direction: row;
-         justify-content: center;
-       }
-       .rf-ccard-content {
-         display: flex;
-         flex-direction: column;
-         position: relative;
-         overflow: hidden;
-         background-color: #fff;
-         border-radius: 18px;
-         width: 480px;
-         height: 500px;
-         white-space: normal;
-         box-shadow: 2px 4px 12px rgba(0,0,0,.08);
-         transition: all .3s cubic-bezier(0,0,.5,1);
-       }
-       html.js .as-util-relatedlink {
-         cursor: pointer;
-       }
-       [data-core-scroller] {
-         white-space: nowrap;
-       }
-       body, button, input, select, textarea {
-         font-synthesis: none;
-         -moz-font-feature-settings: "kern";
-         direction: ltr;
-         text-align: left;
-       }
-       body {
-         font-size: 17px;
-         line-height: 1.47059;
-         font-weight: 400;
-         letter-spacing: -.022em;
-         font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-         color: #1d1d1f;
-         font-style: normal;
-       }
-       html {
-         --r-globalnav-height: 44px;
-         --r-globalnav-segmentbar-height: 0px;
-         --r-globalnav-viewport-large-min-width: 1024px;
-         --r-globalnav-viewport-large-max-width: 1441px;
-         --r-globalnav-viewport-large-query: (min-width: 1024px);
-         --r-globalnav-viewport-medium-min-width: 834px;
-         --r-globalnav-viewport-medium-max-width: 1023px;
-         --r-globalnav-viewport-medium-query: (max-width: 1023px);
-         --r-globalnav-viewport-small-min-width: 420px;
-         --r-globalnav-viewport-small-max-width: 833px;
-         --r-globalnav-viewport-small-query: (max-width: 833px);
-         --r-globalnav-viewport-xsmall-min-width: 320px;
-         --r-globalnav-viewport-xsmall-max-width: 419px;
-         --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-         --r-globalnav-segmentbar-background: #272729;
-         --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-         --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-       }
-       html {
-         font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-         font-size: 106.25%;
-         quotes: "“" "”";
-       }
-      
-       
-.rf-cards-scroller-itemview
-       
+.account-img {
+  	width: 15vh;
+  	height: 15vh;
+  	align-self: center;
+  	margin: auto;
+	padding: 10px;
+}
 
-         .rf-ccard-img-full-wrapper + .rf-ccard-content-info, .rf-ccard-video-full-wrapper + .rf-ccard-content-info {
-           position: absolute;
-           left: 0;
-         }
-         .rf-ccard-content-info {
-           padding: 30px;
-           width: 340px;
-         }
-         .rf-ccard-content {
-           white-space: normal;
-         }
-         html.js .as-util-relatedlink {
-           cursor: pointer;
-         }
-         [data-core-scroller] {
-           white-space: nowrap;
-         }
-         body, button, input, select, textarea {
-           font-synthesis: none;
-           -moz-font-feature-settings: "kern";
-           direction: ltr;
-           text-align: left;
-         }
-         body {
-           font-size: 17px;
-           line-height: 1.47059;
-           font-weight: 400;
-           letter-spacing: -.022em;
-           font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-           color: #1d1d1f;
-           font-style: normal;
-         }
-         html {
-           --r-globalnav-height: 44px;
-           --r-globalnav-segmentbar-height: 0px;
-           --r-globalnav-viewport-large-min-width: 1024px;
-           --r-globalnav-viewport-large-max-width: 1441px;
-           --r-globalnav-viewport-large-query: (min-width: 1024px);
-           --r-globalnav-viewport-medium-min-width: 834px;
-           --r-globalnav-viewport-medium-max-width: 1023px;
-           --r-globalnav-viewport-medium-query: (max-width: 1023px);
-           --r-globalnav-viewport-small-min-width: 420px;
-           --r-globalnav-viewport-small-max-width: 833px;
-           --r-globalnav-viewport-small-query: (max-width: 833px);
-           --r-globalnav-viewport-xsmall-min-width: 320px;
-           --r-globalnav-viewport-xsmall-max-width: 419px;
-           --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-           --r-globalnav-segmentbar-background: #272729;
-           --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-           --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-         }
-         html {
-           font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-           font-size: 106.25%;
-           quotes: "“" "”";
-         }
+.fl-apply {
+	margin-right: -12.5vw;
+}
 
-         .rf-ccard-content-header .rf-ccard-content-headerlink {
-           color: #1d1d1f;
-           text-decoration: none;
-           display: inline-block;
-         }
-         .link:hover, a:hover {
-           text-decoration: underline;
-         }
-         .link:link, .link:visited, a:link, a:visited {
-           text-decoration: none;
-         }
-         .link, a {
-           color: #06c;
-           letter-spacing: inherit;
-         }
-         .rf-ccard-content-header {
-           font-size: 28px;
-           line-height: 1.14286;
-           font-weight: 600;
-           letter-spacing: .007em;
-           font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-           color: #1d1d1f;
-         }
-         .rf-ccard-content {
-           white-space: normal;
-         }
-         html.js .as-util-relatedlink {
-           cursor: pointer;
-         }
-         [data-core-scroller] {
-           white-space: nowrap;
-         }
-         body, button, input, select, textarea {
-           font-synthesis: none;
-           -moz-font-feature-settings: "kern";
-           direction: ltr;
-           text-align: left;
-         }
-         body {
-           font-size: 17px;
-           line-height: 1.47059;
-           font-weight: 400;
-           letter-spacing: -.022em;
-           font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-           color: #1d1d1f;
-           font-style: normal;
-         }
-         html {
-           --r-globalnav-height: 44px;
-           --r-globalnav-segmentbar-height: 0px;
-           --r-globalnav-viewport-large-min-width: 1024px;
-           --r-globalnav-viewport-large-max-width: 1441px;
-           --r-globalnav-viewport-large-query: (min-width: 1024px);
-           --r-globalnav-viewport-medium-min-width: 834px;
-           --r-globalnav-viewport-medium-max-width: 1023px;
-           --r-globalnav-viewport-medium-query: (max-width: 1023px);
-           --r-globalnav-viewport-small-min-width: 420px;
-           --r-globalnav-viewport-small-max-width: 833px;
-           --r-globalnav-viewport-small-query: (max-width: 833px);
-           --r-globalnav-viewport-xsmall-min-width: 320px;
-           --r-globalnav-viewport-xsmall-max-width: 419px;
-           --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-           --r-globalnav-segmentbar-background: #272729;
-           --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-           --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-         }
-         html {
-           font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-           font-size: 106.25%;
-           quotes: "“" "”";
-         }
+.fl-apply-img {
+	width: 15vh;
+	height: 15vh;
+	align-self: center;
+	margin: auto;
+  padding: 10px;
+}
 
-         [class*="t-eyebrow"] {
-           display: block;
-           margin-bottom: .4em;
-         }
-         .rf-ccard-content-eyebrow {
-           font-size: 12px;
-           line-height: 1.33337;
-           font-weight: 400;
-           letter-spacing: -.01em;
-           font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-           font-weight: 600;
-           color: #6e6e73;
-           width: 204px;
-           padding-bottom: 8px;
-         }
-         h2, h3, h4, h5, h6 {
-           font-weight: 600;
-           color: #1d1d1f;
-         }
-         abbr, blockquote, body, button, dd, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hgroup, input, legend, li, ol, p, pre, ul {
-           margin: 0;
-             margin-bottom: 0px;
-           padding: 0;
-             padding-bottom: 0px;
-         }
-         .rf-ccard-content {
-           white-space: normal;
-         }
-         html.js .as-util-relatedlink {
-           cursor: pointer;
-         }
-         [data-core-scroller] {
-           white-space: nowrap;
-         }
-         body, button, input, select, textarea {
-           font-synthesis: none;
-           -moz-font-feature-settings: "kern";
-           direction: ltr;
-           text-align: left;
-         }
-         body {
-           font-size: 17px;
-           line-height: 1.47059;
-           font-weight: 400;
-           letter-spacing: -.022em;
-           font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-           color: #1d1d1f;
-           font-style: normal;
-         }
-         html {
-           --r-globalnav-height: 44px;
-           --r-globalnav-segmentbar-height: 0px;
-           --r-globalnav-viewport-large-min-width: 1024px;
-           --r-globalnav-viewport-large-max-width: 1441px;
-           --r-globalnav-viewport-large-query: (min-width: 1024px);
-           --r-globalnav-viewport-medium-min-width: 834px;
-           --r-globalnav-viewport-medium-max-width: 1023px;
-           --r-globalnav-viewport-medium-query: (max-width: 1023px);
-           --r-globalnav-viewport-small-min-width: 420px;
-           --r-globalnav-viewport-small-max-width: 833px;
-           --r-globalnav-viewport-small-query: (max-width: 833px);
-           --r-globalnav-viewport-xsmall-min-width: 320px;
-           --r-globalnav-viewport-xsmall-max-width: 419px;
-           --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-           --r-globalnav-segmentbar-background: #272729;
-           --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-           --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-         }
-         html {
-           font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-           font-size: 106.25%;
-           quotes: "“" "”";
-         }
+.header-side-div-inner:hover {
+	background-color: #363636;
+	max-height: 225px;
+}
 
-         body {
-           background-color: #1e1e1e;
-        }
-        
-        .heading {
-            color: purple;
-            font-family: Arial, Helvetica, sans-serif;
-          margin: left;
-          max-width: 25rem;
-          padding: 2rem;
-        }
-        
-        .links {
-            background-color: aliceblue;
-            font-family: Arial, Helvetica, sans-serif;
-            margin: left;
-            max-width: 25rem;
-            padding: 2rem
-        }
-        
-        .rf-cards-scroller-platter {
-        
-            width: 100%;
-            vertical-align: top;
-            display: inline-flex;
-            padding-top: 10px;
-            padding-bottom: 40px;
-        
-        }
-        [data-core-scroller] {
-        
-            white-space: nowrap;
-        
-        }
-        body, button, input, select, textarea {
-        
-            font-synthesis: none;
-            -moz-font-feature-settings: "kern";
-            direction: ltr;
-            text-align: left;
-        
-        }
-        body {
-        
-            font-size: 17px;
-            line-height: 1.47059;
-            font-weight: 400;
-            letter-spacing: -.022em;
-            font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            color: #1d1d1f;
-            font-style: normal;
-        
-        }
-        html {
-        
-            --r-globalnav-height: 44px;
-            --r-globalnav-segmentbar-height: 0px;
-            --r-globalnav-viewport-large-min-width: 1024px;
-            --r-globalnav-viewport-large-max-width: 1441px;
-            --r-globalnav-viewport-large-query: (min-width: 1024px);
-            --r-globalnav-viewport-medium-min-width: 834px;
-            --r-globalnav-viewport-medium-max-width: 1023px;
-            --r-globalnav-viewport-medium-query: (max-width: 1023px);
-            --r-globalnav-viewport-small-min-width: 420px;
-            --r-globalnav-viewport-small-max-width: 833px;
-            --r-globalnav-viewport-small-query: (max-width: 833px);
-            --r-globalnav-viewport-xsmall-min-width: 320px;
-            --r-globalnav-viewport-xsmall-max-width: 419px;
-            --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-            --r-globalnav-segmentbar-background: #272729;
-            --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-            --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-        
-        }
-        html {
-        
-            font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 106.25%;
-            quotes: "“" "”";
-        
-        }
-        
-            .rf-ccard-img-full {
-              width: 100%;
-              height: 100%;
-              -o-object-fit: cover;
-              object-fit: cover;
-              display: block;
-            }
-            .rf-ccard-content {
-              white-space: normal;
-            }
-            html.js .as-util-relatedlink {
-              cursor: pointer;
-            }
-            [data-core-scroller] {
-              white-space: nowrap;
-            }
-            body, button, input, select, textarea {
-              font-synthesis: none;
-              -moz-font-feature-settings: "kern";
-              direction: ltr;
-              text-align: left;
-            }
-            body {
-              font-size: 17px;
-              line-height: 1.47059;
-              font-weight: 400;
-              letter-spacing: -.022em;
-              font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-              color: #1d1d1f;
-              font-style: normal;
-            }
-            html {
-              --r-globalnav-height: 44px;
-              --r-globalnav-segmentbar-height: 0px;
-              --r-globalnav-viewport-large-min-width: 1024px;
-              --r-globalnav-viewport-large-max-width: 1441px;
-              --r-globalnav-viewport-large-query: (min-width: 1024px);
-              --r-globalnav-viewport-medium-min-width: 834px;
-              --r-globalnav-viewport-medium-max-width: 1023px;
-              --r-globalnav-viewport-medium-query: (max-width: 1023px);
-              --r-globalnav-viewport-small-min-width: 420px;
-              --r-globalnav-viewport-small-max-width: 833px;
-              --r-globalnav-viewport-small-query: (max-width: 833px);
-              --r-globalnav-viewport-xsmall-min-width: 320px;
-              --r-globalnav-viewport-xsmall-max-width: 419px;
-              --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-              --r-globalnav-segmentbar-background: #272729;
-              --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-              --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-            }
-            html {
-              font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-              font-size: 106.25%;
-              quotes: "“" "”";
-            }
-        
-            .rf-ccard-40 .rf-ccard-content {
-                  width: 400px;
-                }
-                .rf-ccard-content.rf-ccard-content-withfullimg {
-                  flex-direction: row;
-                  justify-content: center;
-                }
-                .rf-ccard-content {
-                  display: flex;
-                  flex-direction: column;
-                  position: relative;
-                  overflow: hidden;
-                  background-color: #fff;
-                  border-radius: 18px;
-                  width: 480px;
-                  height: 500px;
-                  white-space: normal;
-                  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
-                  transition: all .3s cubic-bezier(0,0,.5,1);
-                }
-                html.js .as-util-relatedlink {
-                  cursor: pointer;
-                }
-                [data-core-scroller] {
-                  white-space: nowrap;
-                }
-                body, button, input, select, textarea {
-                  font-synthesis: none;
-                  -moz-font-feature-settings: "kern";
-                  direction: ltr;
-                  text-align: left;
-                }
-                body {
-                  font-size: 17px;
-                  line-height: 1.47059;
-                  font-weight: 400;
-                  letter-spacing: -.022em;
-                  font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                  color: #1d1d1f;
-                  font-style: normal;
-                }
-                html {
-                  --r-globalnav-height: 44px;
-                  --r-globalnav-segmentbar-height: 0px;
-                  --r-globalnav-viewport-large-min-width: 1024px;
-                  --r-globalnav-viewport-large-max-width: 1441px;
-                  --r-globalnav-viewport-large-query: (min-width: 1024px);
-                  --r-globalnav-viewport-medium-min-width: 834px;
-                  --r-globalnav-viewport-medium-max-width: 1023px;
-                  --r-globalnav-viewport-medium-query: (max-width: 1023px);
-                  --r-globalnav-viewport-small-min-width: 420px;
-                  --r-globalnav-viewport-small-max-width: 833px;
-                  --r-globalnav-viewport-small-query: (max-width: 833px);
-                  --r-globalnav-viewport-xsmall-min-width: 320px;
-                  --r-globalnav-viewport-xsmall-max-width: 419px;
-                  --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-                  --r-globalnav-segmentbar-background: #272729;
-                  --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-                  --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-                }
-                html {
-                  font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                  font-size: 106.25%;
-                  quotes: "“" "”";
-                }
-               
-                
-        .rf-cards-scroller-itemview
-                
-        
-                  .rf-ccard-img-full-wrapper + .rf-ccard-content-info, .rf-ccard-video-full-wrapper + .rf-ccard-content-info {
-                    position: absolute;
-                    left: 0;
-                  }
-                  .rf-ccard-content-info {
-                    padding: 30px;
-                    width: 340px;
-                  }
-                  .rf-ccard-content {
-                    white-space: normal;
-                  }
-                  html.js .as-util-relatedlink {
-                    cursor: pointer;
-                  }
-                  [data-core-scroller] {
-                    white-space: nowrap;
-                  }
-                  body, button, input, select, textarea {
-                    font-synthesis: none;
-                    -moz-font-feature-settings: "kern";
-                    direction: ltr;
-                    text-align: left;
-                  }
-                  body {
-                    font-size: 17px;
-                    line-height: 1.47059;
-                    font-weight: 400;
-                    letter-spacing: -.022em;
-                    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                    color: #1d1d1f;
-                    font-style: normal;
-                  }
-                  html {
-                    --r-globalnav-height: 44px;
-                    --r-globalnav-segmentbar-height: 0px;
-                    --r-globalnav-viewport-large-min-width: 1024px;
-                    --r-globalnav-viewport-large-max-width: 1441px;
-                    --r-globalnav-viewport-large-query: (min-width: 1024px);
-                    --r-globalnav-viewport-medium-min-width: 834px;
-                    --r-globalnav-viewport-medium-max-width: 1023px;
-                    --r-globalnav-viewport-medium-query: (max-width: 1023px);
-                    --r-globalnav-viewport-small-min-width: 420px;
-                    --r-globalnav-viewport-small-max-width: 833px;
-                    --r-globalnav-viewport-small-query: (max-width: 833px);
-                    --r-globalnav-viewport-xsmall-min-width: 320px;
-                    --r-globalnav-viewport-xsmall-max-width: 419px;
-                    --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-                    --r-globalnav-segmentbar-background: #272729;
-                    --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-                    --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-                  }
-                  html {
-                    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                    font-size: 106.25%;
-                    quotes: "“" "”";
-                  }
-        
-                  .rf-ccard-content-header .rf-ccard-content-headerlink {
-                    color: #1d1d1f;
-                    text-decoration: none;
-                    display: inline-block;
-                  }
-                  .link:hover, a:hover {
-                    text-decoration: underline;
-                  }
-                  .link:link, .link:visited, a:link, a:visited {
-                    text-decoration: none;
-                  }
-                  .link, a {
-                    color: #06c;
-                    letter-spacing: inherit;
-                  }
-                  .rf-ccard-content-header {
-                    font-size: 28px;
-                    line-height: 1.14286;
-                    font-weight: 600;
-                    letter-spacing: .007em;
-                    font-family: SF Pro Display,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                    color: #1d1d1f;
-                  }
-                  .rf-ccard-content {
-                    white-space: normal;
-                  }
-                  html.js .as-util-relatedlink {
-                    cursor: pointer;
-                  }
-                  [data-core-scroller] {
-                    white-space: nowrap;
-                  }
-                  body, button, input, select, textarea {
-                    font-synthesis: none;
-                    -moz-font-feature-settings: "kern";
-                    direction: ltr;
-                    text-align: left;
-                  }
-                  body {
-                    font-size: 17px;
-                    line-height: 1.47059;
-                    font-weight: 400;
-                    letter-spacing: -.022em;
-                    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                    color: #1d1d1f;
-                    font-style: normal;
-                  }
-                  html {
-                    --r-globalnav-height: 44px;
-                    --r-globalnav-segmentbar-height: 0px;
-                    --r-globalnav-viewport-large-min-width: 1024px;
-                    --r-globalnav-viewport-large-max-width: 1441px;
-                    --r-globalnav-viewport-large-query: (min-width: 1024px);
-                    --r-globalnav-viewport-medium-min-width: 834px;
-                    --r-globalnav-viewport-medium-max-width: 1023px;
-                    --r-globalnav-viewport-medium-query: (max-width: 1023px);
-                    --r-globalnav-viewport-small-min-width: 420px;
-                    --r-globalnav-viewport-small-max-width: 833px;
-                    --r-globalnav-viewport-small-query: (max-width: 833px);
-                    --r-globalnav-viewport-xsmall-min-width: 320px;
-                    --r-globalnav-viewport-xsmall-max-width: 419px;
-                    --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-                    --r-globalnav-segmentbar-background: #272729;
-                    --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-                    --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-                  }
-                  html {
-                    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                    font-size: 106.25%;
-                    quotes: "“" "”";
-                  }
-        
-                  [class*="t-eyebrow"] {
-                    display: block;
-                    margin-bottom: .4em;
-                  }
-                  .rf-ccard-content-eyebrow {
-                    font-size: 12px;
-                    line-height: 1.33337;
-                    font-weight: 400;
-                    letter-spacing: -.01em;
-                    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                    font-weight: 600;
-                    color: #6e6e73;
-                    width: 204px;
-                    padding-bottom: 8px;
-                  }
-                  h2, h3, h4, h5, h6 {
-                    font-weight: 600;
-                    color: #1d1d1f;
-                  }
-                  abbr, blockquote, body, button, dd, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hgroup, input, legend, li, ol, p, pre, ul {
-                    margin: 0;
-                      margin-bottom: 0px;
-                    padding: 0;
-                      padding-bottom: 0px;
-                  }
-                  .rf-ccard-content {
-                    white-space: normal;
-                  }
-                  html.js .as-util-relatedlink {
-                    cursor: pointer;
-                  }
-                  [data-core-scroller] {
-                    white-space: nowrap;
-                  }
-                  body, button, input, select, textarea {
-                    font-synthesis: none;
-                    -moz-font-feature-settings: "kern";
-                    direction: ltr;
-                    text-align: left;
-                  }
-                  body {
-                    font-size: 17px;
-                    line-height: 1.47059;
-                    font-weight: 400;
-                    letter-spacing: -.022em;
-                    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                    color: #1d1d1f;
-                    font-style: normal;
-                  }
-                  html {
-                    --r-globalnav-height: 44px;
-                    --r-globalnav-segmentbar-height: 0px;
-                    --r-globalnav-viewport-large-min-width: 1024px;
-                    --r-globalnav-viewport-large-max-width: 1441px;
-                    --r-globalnav-viewport-large-query: (min-width: 1024px);
-                    --r-globalnav-viewport-medium-min-width: 834px;
-                    --r-globalnav-viewport-medium-max-width: 1023px;
-                    --r-globalnav-viewport-medium-query: (max-width: 1023px);
-                    --r-globalnav-viewport-small-min-width: 420px;
-                    --r-globalnav-viewport-small-max-width: 833px;
-                    --r-globalnav-viewport-small-query: (max-width: 833px);
-                    --r-globalnav-viewport-xsmall-min-width: 320px;
-                    --r-globalnav-viewport-xsmall-max-width: 419px;
-                    --r-globalnav-viewport-xsmall-query: (max-width: 419px);
-                    --r-globalnav-segmentbar-background: #272729;
-                    --r-globalnav-segmentbar-text-color: rgba(255,255,255,0.92);
-                    --r-globalnav-segmentbar-border-color: rgba(255,255,255,0.24);
-                  }
-                  html {
-                    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-                    font-size: 106.25%;
-                    quotes: "“" "”";
-                  }
+.slider {
+	position: relative;
+	top: 7%;
+	height: 70%;
+	width: 100%;
+	padding: 0px 20px;
+	cursor: grab;
+}
+
+.grabbing {
+	cursor: grabbing;
+}
+
+.grab {
+	cursor: grab;
+}
+  
+.slider__inner{
+	position: absolute;
+	top: 37%;
+	left: 0;
+	height: 100%;
+	pointer-events: none;
+}
+  
+.slide{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	transform: translateY(-50%);
+	width: 20vw;
+	height: 65vh;
+	padding: 1rem 1rem 1rem 1rem;
+	cursor: pointer;
+}
+
+.slide:hover {
+	background-color: white;
+}
+
+.slide-img {
+  	width: 100%; 
+  	height: 100%; 
+  	object-fit: cover; 
+  	top: 20%;
+  	border-radius: 2vh;
+}
+  
+.slide__bg{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	bottom: 10%;
+	right: 10%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.slide-title {
+	font-family: 'Cabin', sans-serif;
+	font-weight: thin;
+	color: #e1e1e1;
+	font-size: calc(1.35vw + 1.35vh);
+	padding: 20px 0px;
+}
+
+.slide-topic {
+	font-family: 'Cabin', sans-serif;
+	font-weight: thin;
+	color: #e1e1e1;
+	font-size: calc(1vw + 1vh);
+	font-style: italic;
+	padding: 10px 0px;
+}
+  
+.text{
+	position: absolute;
+	color: #666;
+	left: 4rem;
+	bottom: 3rem;
+}
+  
+.cursor-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+  
+.cursor{
+	position: fixed;
+	top: -30px;
+	left: -30px;
+}
+
+/* ofl = open filter list */
+
+.ocfl {
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+.ofl-header {
+	animation-name: ofl-header;
+}
+
+.ofl-heading {
+	animation-name: ofl-heading;
+}
+
+.ofl-slider {
+	animation-name: ofl-slider;
+}
+
+.ofl-acc {
+	animation-name: ofl-acc;
+}
+
+.cfl-header {
+	animation-name: cfl-header;
+}
+
+.cfl-heading {
+	animation-name: cfl-heading;
+}
+
+.cfl-slider {
+	animation-name: cfl-slider;
+}
+
+.cfl-acc {
+	animation-name: cfl-acc;
+}
+
+@keyframes ofl-header {
+	to {
+		height: 100%;
+	}
+}
+
+@keyframes ofl-heading {
+	to {
+		height: 90%;
+	}
+}
+
+@keyframes ofl-slider {
+	to {
+		top: 120%;
+	}
+}
+
+@keyframes ofl-acc {
+	to {
+		position: absolute;
+		margin-left: 100%;
+	}
+} 
+
+@keyframes cfl-header {
+	from {
+		height: 100%;
+	}
+
+	to {
+		height: 20%;
+	}
+}
+
+@keyframes cfl-heading {
+	from {
+		height: 90%;
+	}
+
+	to {
+		height: 75%;
+	}
+}
+
+@keyframes cfl-slider {
+	from {
+		top: 120%;
+	}
+
+	to {
+		top: 7%;
+	}
+}
