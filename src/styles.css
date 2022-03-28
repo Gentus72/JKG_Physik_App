@@ -17,14 +17,13 @@ body {
 
 .topic-squares {
 	position: inherit;
-	/*margin: 5vw;*/
-	margin: 25vw;
+	margin: 5vw;
 	top: 0;
 	left: 0;
 }
 
 .tpc-sqr-item {
-	display: grid;
+	position: relative;
 	border-radius: 8px;
 	font-family: Arial, Helvetica, sans-serif;
 	width: 25vw; 
@@ -32,12 +31,9 @@ body {
 	background-color: #494949;
 	text-align: center;
 	line-height: 30vh;
+	display: flex;
+	justify-content: center;
 	overflow: hidden;
-}
-
-.tpc-sqr-item > * {
-	grid-row: 1;
-	grid-column: 1;
 }
 
 .tpc-sqr-item:hover {
@@ -46,29 +42,27 @@ body {
 
 .tpc-sqr-item:hover > .tpc-item-text {
 	animation-name: tpc-sqr-item-text-hover;
-	animation-duration: 0.3s;
+	animation-duration: 0.5s;
 	opacity: 0.0;
 	z-index: 0;
 }
 
 .tpc-sqr-item:hover > .prev-vid {
 	animation-name: prev-vid-hover;
-	animation-duration: 0.3s;
+	animation-duration: 0.5s;
 	opacity: 1.0;
 }
 
 .prev-vid {
-	position: inherit;
+	position: absolute;
 	height: 100%;
 	overflow: hidden; 
     z-index: 0.01;
 	opacity: 0.6;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .tpc-item-text {
+	position: absolute;
 	display: inline-block;
 	vertical-align: middle;
 	line-height: inherit;
