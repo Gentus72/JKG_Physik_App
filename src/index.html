@@ -6,133 +6,16 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header id="header" class="header ocfl">
-            <!-- Filter Settings Toggler -->
-            <div class="header-side-div">
-                <div class="header-side-div-inner">
-                    <img class="filter-img" src="res/filter_settings.ico">
-                </div>
-            </div>
-            <!-- Viereck in der Mitte kommt hier hin -->
-            <div id="acc-img" class="header-side-div account">
-                <div class="header-side-div-inner">
-                    <img class="account-img" src="res/empty-user.jpg">
-                </div>
-            </div>
-        </header>
-
         <!-- Topic Squares -->
         <div class="topic-squares">
             <div id="tpc-OPTIK" class="tpc-sqr-item">
-                <img class="tpc-sqr-bg" src="res/res1.jpg">
                 <h4 class="tpc-item-text">Example Topic</h4>
+                <video onmouseover="this.play()" onmouseout="this.pause(); 
+                      this.currentTime=0;" class="prev-vid" muted loop src="res/res2.mp4">
+                </video>
             </div>
         </div>
 
-        <div id="slider" class="slider js-slider ocfl" style="display: none;">
-            <div id="inner-slider" class="slider__inner js-slider__inner">
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <a href="https://minecraft.net/"><img src="res/res1.jpg" class="slide-img"></a>
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-                <div class="slide js-slide">
-                    <div class="slide__bg">
-                        <h2 class="slide-title">Example Name</h2>
-                        <img src="res/res1.jpg" class="slide-img">
-                        <h3 class="slide-topic">Example Topic</h3>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <script rel="text/javascript" src="app.js"></script>
+        <script rel="text/javascript" src="page.js"></script>
     </body>
 </html> 
