@@ -84,6 +84,8 @@ td {
 	color: #000;
 	font-weight: bolder;
 	text-shadow: 2px black;
+	overflow-x: auto;
+	width: 100%;
 }
 
 @keyframes exp-text-hover {
