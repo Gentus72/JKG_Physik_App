@@ -62,6 +62,10 @@ header {
 	line-height: 10vh;
 }
 
+.filter:hover {
+	border: 3px solid white;
+}
+
 #filter-class {
 	margin-left: 5%;
 }
@@ -115,6 +119,10 @@ td {
 
 .experiment > * {
 	opacity: 0.7;
+}
+
+.experiment:hover {
+	border: 3px solid white;
 }
 
 .experiment:hover > * {
