@@ -26,21 +26,56 @@ header {
 	height: 20vh;
 	width: 100%;
 	justify-content: center;
+	align-items: center;
+	text-align: center;
 	line-height: 20vh;
 	z-index: 100;
 	background-color: #313131;
+	display: flex;
 }
 
 .title {
-	width: 100%;
+	width: 60%;
 	height: 100%;
 	text-align: center;
 	color: rgb(225, 230, 231);
 	font-size: 8vw;
 	position: absolute;
+	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
 	line-height: inherit;
+	margin: auto;
+}
+
+.filter {
+	width: 15%;
+	height: 10vh;
+	background-color: rgb(32, 32, 32);
+	margin: auto;
+	border-radius: 10px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+	line-height: 10vh;
+}
+
+#filter-class {
+	margin-left: 5%;
+}
+
+#filter-topic {
+	margin-right: 5%;
+}
+
+.filter-text {
+	line-height: inherit;
+	align-self: center;
+	text-align: center;
+	font-size: 2.75vw;
+	color: rgb(225, 230, 231);
 }
 
 .experiments {
