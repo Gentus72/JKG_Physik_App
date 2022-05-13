@@ -1,0 +1,61 @@
+<html>
+    <body>
+        <div class="return-sidebar">
+            <a href="../../../index.html"><b>ZURÜCK</b></a>
+        </div>
+        <video
+            id="my-video"
+            class="video-js"
+            controls
+            preload="auto"
+            width="75%"
+            height="95%"
+            poster="../../res1.jpg"
+            data-setup="{}"
+            style="
+                position: absolute;
+                vertical-align: middle;
+                right: 0;
+            ">
+            <source src="res2.mp4" type="video/mp4" />
+        </video>
+    </body>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            overflow: hidden;
+        }
+
+        body * {
+            display: inline-block;
+            padding: 10px;
+            padding-left: 20px;
+        }
+
+        .return-sidebar {
+            margin: 0;
+            padding: 0;
+            width: 20%;
+            background-color: #2f2f2f;
+            position: fixed;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .return-sidebar a {
+            height: 100%;
+            display: block;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 16px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 25px;
+            line-height: 100vh;
+        }
+
+        .return-sidebar a:hover {
+            background-color: #4f4f4f;
+        }
+    </style>
+</html>
