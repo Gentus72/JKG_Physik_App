@@ -5,18 +5,13 @@
         </div>
         <video
             id="my-video"
-            class="video-js"
+            class="video-js vid"
             controls
             preload="auto"
             width="75%"
             height="95%"
             poster="../../res1.jpg"
-            data-setup="{}"
-            style="
-                position: absolute;
-                vertical-align: middle;
-                right: 0;
-            ">
+            data-setup="{}">
             <source src="res2.mp4" type="video/mp4" />
         </video>
     </body>
@@ -32,6 +27,12 @@
             padding-left: 20px;
         }
 
+        .vid {
+            color: #1e1e1e;
+            position: absolute;
+            right: 0;
+        }
+
         .return-sidebar {
             margin: 0;
             padding: 0;
@@ -40,11 +41,15 @@
             position: fixed;
             height: 100%;
             overflow: hidden;
+            display: flex;
+	        justify-content: center;
+            align-items: baseline;
         }
 
         .return-sidebar a {
             height: 100%;
-            display: block;
+            width: 100%;
+            position: relative;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
             padding: 16px;
