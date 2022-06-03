@@ -1,19 +1,28 @@
 //TODO: reference to external elements
-var all_experiments_txt;
-fetch('experiments.html')
-  .then(response => response.text()
-  .then(text => all_experiments_txt = text.toString()));
+/*async function getExternalHTML(fileName) {
+  await fetch(fileName + '.html')
+    .then(response => response.text())
+    .then(text => {
+      //console.log(text);
+      document.getElementById('experiments-table').innerHTML = text;
+      return(text);
+    });
+}*/
 
-var all_experiments_seperate = all_experiments_txt.split('<!---->');
-console.log(all_experiments_seperate);
+//all_experiments_txt = getExternalHTML('experiments');
+//console.log('output function: ' + getExternalHTML('experiments'));
+//console.log('value txt: ' + all_experiments_txt);
+//var all_experiments_seperate = all_experiments_txt.split('<!---->');
 
 var _classFilter = 0, _topicFilter = 0;
 
-//_classFilter count acts as class grade
-//filter regex is: 'kl-{_classFilter}'
+/*
+_classFilter count acts as class grade
+filter regex is: 'kl-{_classFilter}'
 
-//_topicFilter is index of topics
-//filter regex is: 'tpc-{topics[_topicFilter]}'
+_topicFilter is index of topics
+filter regex is: 'tpc-{topics[_topicFilter]}'
+*/
 
 var topics = [
   'optik',
@@ -66,4 +75,28 @@ function sortExperiments(classFilter, topicFilter) {
 
 function updateExperimentList(list) {
   return null;
+}
+
+class Experiment {
+  constructor(name, klasse, topic) {
+    this.name = name;
+    this.klasse = klasse;
+    this.topic = topic;
+  }
+
+  get getHTML() {
+    /*
+    Syntax:
+      <td>
+        <div id="exp-#xyz" class="experiment">
+            <h4 class="exp-text">Example Exp</h4>
+            <video onmouseover="this.play()" onmouseout="this.pause(); 
+                this.currentTime=0;" onclick="window.location.href='res/experiments/example_exp.html'" class="prev-vid" muted loop src="res/experiments/exp1/res2.mp4">
+            </video>
+        </div>
+      </td>
+    */
+
+    var code = "<td>\n\s<div id='{x}'";
+  }
 }
