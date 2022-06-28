@@ -11,22 +11,22 @@
         <!-- TODO: implement filters -->
         <header>
             <div id="sidenav-left" class="sidenav" style="background-color: #4f4f4f;">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavL('-', 0)">egal</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavL('Klasse 6', 6)">Klasse 6</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavL('Klasse 7', 7)">Klasse 7</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavL('Klasse 8', 8)">Klasse 8</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavL('Klasse 9', 9)">Klasse 9</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavL('Klasse 10', 10)">Klasse 10</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavL('Sek. II', 11)">Sek. II</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="classFilter = 0; closeNavL('-', 0);">egal</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="classFilter = 6; closeNavL('Klasse 6', 6)">Klasse 6</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="classFilter = 7; closeNavL('Klasse 7', 7)">Klasse 7</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="classFilter = 8; closeNavL('Klasse 8', 8)">Klasse 8</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="classFilter = 9; closeNavL('Klasse 9', 9)">Klasse 9</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="classFilter = 10; closeNavL('Klasse 10', 10)">Klasse 10</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="classFilter = 11; closeNavL('Sek. II', 11)">Sek. II</a>
             </div>
             <div id="sidenav-right" class="sidenav" style="background-color: #4f4f4f;">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavR('-', 0)">egal</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavR('Optik', 1)">Optik</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavR('Mechanik', 2)">Mechanik</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavR('Thermdyn.', 3)">Thermodynamik</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavR('Elektr.', 4)">Elektritzität</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavR('E. in N.&T.', 5)">Energie in Natur & Technik</a>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNavR('M. der Fl.', 6)">Mechanik der Flüssigkeiten</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="topicFilter = ''; closeNavR('-', 0)">egal</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="topicFilter = 'optik'; closeNavR('Optik', 1)">Optik</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="topicFilter = 'mechanik'; closeNavR('Mechanik', 2)">Mechanik</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="topicFilter = 'thermodynamik'; closeNavR('Thermdyn.', 3)">Thermodynamik</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="topicFilter = 'elektrizität'; closeNavR('Elektr.', 4)">Elektritzität</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="topicFilter = 'energie_in_n_und_t'; closeNavR('E. in N.&T.', 5)">Energie in Natur & Technik</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="topicFilter = 'mech_der_fl'; closeNavR('M. der Fl.', 6)">Mechanik der Flüssigkeiten</a>
             </div>
             <div id="filter-class" class="filter">
                 <a id="filter-class-text" href="javascript:void(0)" onClick="openNavL();" class="filter-text">-</a>
@@ -116,7 +116,7 @@
                                 this.currentTime=0;" onclick="window.location.href='res/experiments/example_exp.html'" class="prev-vid" muted loop src="res/experiments/exp1/res2.mp4">
                             </video>
                         </div>
-                    </td>
+                    </td>f
                 </tr>
                 <tr>
                     <td>
@@ -173,7 +173,7 @@
             </table>
         </div>
 
-        <script rel="text/javascript" src="app.js"></script>
         <script rel="text/javascript" src="sort_experiments.js"></script>
+        <script rel="text/javascript" src="app.js"></script>
     </body>
 </html> 

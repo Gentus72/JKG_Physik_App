@@ -1,3 +1,5 @@
+var classFilter = 0, topicFilter = '';
+
 function openNavL() {
   document.getElementById('sidenav-left').style.width = '25vw';
 }
@@ -5,7 +7,7 @@ function openNavL() {
 function closeNavL(choice, filterIndex) {
   document.getElementById('sidenav-left').style.width = '0';
   document.getElementById('filter-class-text').textContent = choice;
-  sortExperiments(filterIndex, _topicFilter);
+  sortExperiments(classFilter, topicFilter);
 }
 
 function openNavR() {
@@ -15,5 +17,5 @@ function openNavR() {
 function closeNavR(choice, filterIndex) {
   document.getElementById('sidenav-right').style.width = '0';
   document.getElementById('filter-topic-text').textContent = choice;
-  sortExperiments(_classFilter, filterIndex);
+  sortExperiments(classFilter, topicFilter);
 }
