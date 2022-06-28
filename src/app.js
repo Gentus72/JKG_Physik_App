@@ -1,18 +1,10 @@
-//TODO: reference to external elements
-/*async function getExternalHTML(fileName) {
-  await fetch(fileName + '.html')
-    .then(response => response.text())
-    .then(text => {
-      //console.log(text);
-      document.getElementById('experiments-table').innerHTML = text;
-      return(text);
-    });
-}*/
-
-//all_experiments_txt = getExternalHTML('experiments');
-//console.log('output function: ' + getExternalHTML('experiments'));
-//console.log('value txt: ' + all_experiments_txt);
-//var all_experiments_seperate = all_experiments_txt.split('<!---->');
+$(document).ready(function()
+{
+  $.get('experiments.html', function(html_string)
+   {
+      console.log(html_string);  // this is not Working
+   });
+});
 
 var _classFilter = 0, _topicFilter = 0;
 
@@ -23,6 +15,26 @@ filter regex is: 'kl-{_classFilter}'
 _topicFilter is index of topics
 filter regex is: 'tpc-{topics[_topicFilter]}'
 */
+
+var experiments_names = [
+  'das Ei in der Flasche',
+  'das schwebende Röhrchen',
+  'Demonstration des Auflagedrucks',
+  'platzender Luftballon',
+  'Wasser im Glas'
+], experiments_classes = [
+  [6, 8, 9],
+  [7, 8],
+  [10],
+  [6, 8, 10],
+  [5, 7]
+], experiments_topics = [
+  ['mechanik', 'mech_der_fl'],
+  ['mech_der_fl'],
+  ['mechanik', 'energie_in_n_und_t'],
+  ['thermodynamik', 'mech_der_fl'],
+  ['mech_der_fl']
+]
 
 var topics = [
   'optik',
