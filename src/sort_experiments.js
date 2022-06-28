@@ -45,26 +45,9 @@ function sortExperiments(classFilter, topicFilter) {
 
   console.log(classFilter + ' + ' + topicFilter);
 
-  //not working when class and topic are specified (obviously)
   for (var e of total_experiments) {
-    if (classFilter != 0) {
-      var _klasse = e.getInfo('klasse');
-
-      for (var i = 0; i < _klasse.length; i++) {
-        if (_klasse[i] == classFilter) {
-          result.push(e);
-        }
-      }
-    }
-
-    if (topicFilter != '') {
-      var _topic = e.getInfo('topic');
-
-      for (var i = 0; i < _topic.length; i++) {
-        if (_topic[i] == topicFilter) {
-          result.push(e);
-        }
-      }
+    if(matchesFilter(e, classFilter, topicFilter)) {
+      result.push(e);
     }
   }
 
@@ -72,9 +55,59 @@ function sortExperiments(classFilter, topicFilter) {
   return result;
 }
 
+function matchesFilter(e, classFilter, topicFilter) {
+  if (classFilter != 0 && topicFilter == '') {
+    console.log('exec1');
+    var _klasse = e.getInfo('klasse');
+
+    for (var i = 0; i < _klasse.length; i++) {
+      if (_klasse[i] == classFilter) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  else if (topicFilter != '' && classFilter == 0) {
+    console.log('exec2');
+    var _topic = e.getInfo('topic');
+
+    for (var i = 0; i < _topic.length; i++) {
+      if (_topic[i] == topicFilter) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  else if (topicFilter != '' && classFilter != 0) {
+    console.log('exec3');
+    var _class = e.getInfo('klasse');
+    var _topic = e.getInfo('topic');
+
+    for (var i = 0; i < _class.length; i++) {
+      if (_class[i] == classFilter) {
+        return true;
+      }
+    }
+
+    for (var i = 0; i < _topic.length; i++) {
+      if (_topic[i] == topicFilter) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  return false;
+}
+
 //TODO implement
 function generateExperimentHTML(sorted_experiments, resultFountToF) {
   if (resultFountToF) {
-
+    //generate HTML
   }
 }
