@@ -1,3 +1,5 @@
+jQuery("h4").fitText(0.38);
+
 var classFilter = 0, topicFilter = '';
 
 function openNavL() {

@@ -129,14 +129,14 @@ td {
 	opacity: 1.0;
 }
 
-.experiment:hover > .exp-text {
+.experiment:hover > h4 {
 	animation-name: exp-text-hover;
 	animation-duration: 0.5s;
 	opacity: 0.0;
 	z-index: 0;
 }
 
-.experiment > .exp-text {
+.experiment > h4 {
 	animation-name: exp-text-unhover;
 	animation-duration: 0.5s;
 	z-index: 1;
@@ -148,19 +148,28 @@ td {
 	overflow: hidden; 
     z-index: 0.01;
 }
-
-.exp-text {
-	position: absolute;
-	display: inline-block;
-	vertical-align: middle;
-	line-height: inherit;
-	font-size: 3vw;
+/*
+h4 {
+	text-align: center;
 	color: #000;
-	font-weight: bolder;
-	text-shadow: 2px black;
-	overflow-x: auto;
-	width: 100%;
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+h4 {
+  position: unset;
+  font-size: unset;
+  text-align: center;
+  font-family: 'Bowlby One SC', cursive;
+  width: 320px;
+  height: 320px;
+  background: pink;
+  margin: 0 auto;
 }
+
 
 @keyframes exp-text-hover {
 	from { 
