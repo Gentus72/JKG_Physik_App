@@ -34,40 +34,42 @@ class Experiment {
 
 //grab from server / file from server
 var total_experiments = [
-    new Experiment('das Ei in der Flasche',             [6, 8, 9],  ['mechanik', 'mech_der_fl'],        '001'),
-    new Experiment('das schwebende Röhrchen',           [7, 8],     ['mech_der_fl'],                    '002'),
-    new Experiment('Demonstration des Auflagedrucks',   [10],       ['mechanik', 'energie_in_n_und_t'], '003'),
-    new Experiment('platzender Luftballon',             [6, 8, 10], ['thermodynamik', 'mech_der_fl'],   '004'),
-    new Experiment('Wasser im Glas',                    [5, 7],     ['mech_der_fl'],                    '005')
+    new Experiment('das Ei in der Flasche',               [6, 8, 9],  ['mechanik', 'mech_der_fl'],        '001'),
+    new Experiment('das schwebende Röhrchen',             [7, 8],     ['mech_der_fl'],                    '005'),
+    new Experiment('Demonstration des Auflagedrucks',     [10],       ['mechanik', 'energie_in_n_und_t'], '006'),
+    new Experiment('platzender Luftballon',               [6, 8, 10], ['thermodynamik', 'mech_der_fl'],   '007'),
+    new Experiment('Wasser im Glas',                      [5, 7],     ['mech_der_fl'],                    '008'),
+    new Experiment('Zusammenziehen auf Skateboards',      [6, 8],     ['mechanik', 'kräfte'],             '002'),
+    new Experiment('Demonstration Oberflächenspannung',   [7, 9],     ['kräfte'],                         '003'),
+    new Experiment('Luftdruck-Rakete 350ml',              [8, 10],    ['kräfte'],                         '004')
 ]
 
 function sortExperiments(classFilter, topicFilter) {
     //go through every entry of total_experiments and
     //scan for matches using Experiment.getInfo(filter)
 
-    var result = [];
-
-    console.log(classFilter + ' + ' + topicFilter);
-
-    for (var e of total_experiments) {
-        if(matchesFilter(e, classFilter, topicFilter)) {
-            result.push(e);
+    let result = [];
+    
+    if (classFilter == 0 && topicFilter == '') {
+        result = total_experiments;
+    } else {
+        for (let e of total_experiments) {
+            if(matchesFilter(e, classFilter, topicFilter)) {
+                result.push(e);
+            }
         }
     }
-
-    console.log(result);
     
     if (result.length > 0) {
-        generateExperimentHTML(result);
+        document.getElementById('experiments-table').innerHTML = generateExperimentHTML(result);
     }
 }
 
 function matchesFilter(e, classFilter, topicFilter) {
     if (classFilter != 0 && topicFilter == '') {
-        console.log('exec1');
-        var _klasse = e.getInfo('klasse');
+        let _klasse = e.getInfo('klasse');
 
-        for (var i = 0; i < _klasse.length; i++) {
+        for (let i = 0; i < _klasse.length; i++) {
             if (_klasse[i] == classFilter) {
                 return true;
             }
@@ -78,9 +80,9 @@ function matchesFilter(e, classFilter, topicFilter) {
 
     else if (topicFilter != '' && classFilter == 0) {
         console.log('exec2');
-        var _topic = e.getInfo('topic');
+        let _topic = e.getInfo('topic');
 
-        for (var i = 0; i < _topic.length; i++) {
+        for (let i = 0; i < _topic.length; i++) {
             if (_topic[i] == topicFilter) {
                 return true;
             }
@@ -91,11 +93,11 @@ function matchesFilter(e, classFilter, topicFilter) {
 
     else if (topicFilter != '' && classFilter != 0) {
         console.log('exec3');
-        var _class = e.getInfo('klasse');
-        var _topic = e.getInfo('topic');
+        let _class = e.getInfo('klasse');
+        let _topic = e.getInfo('topic');
 
-        for (var i = 0; i < _class.length; i++) {
-            for (var j = 0; j < _topic.length; j++) {
+        for (let i = 0; i < _class.length; i++) {
+            for (let j = 0; j < _topic.length; j++) {
                 if (_class[i] == classFilter && _topic[j] == topicFilter) {
                     return true;
                 }
@@ -108,47 +110,49 @@ function matchesFilter(e, classFilter, topicFilter) {
 
 //TODO implement
 function generateExperimentHTML(sorted_experiments) {
-    var htmlContent = '';
+    let htmlContent = '';
 
-    for (var i = 0; i < Math.floor(sorted_experiments / 3); i++) {
-        htmlContent +=  '<tr>' + '<td><div id="exp'
-        + sorted_experiments[i].getInfo('id')
-        + '" class="experiment"><h4 class="exp-text">'
-        + sorted_experiments[i].getInfo('name')
-        + '</h4><video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0" onClick="window.location.href=\'res/experiments/exp'
-        + sorted_experiments[i].getInfo('id')
-        + '.html\'" class="prev-vid" muted loop src="res/experiments/exp'
-        + sorted_experiments[i].getInfo('id')
-        + '/res2.mp4"></video></div></td>';
+    for (let i = 0; i < Math.floor(sorted_experiments.length / 3); i++) {
+        htmlContent += '<tr>';
 
-        htmlContent += '<td><div id="exp'
-        + sorted_experiments[i + 1].getInfo('id')
-        + '" class="experiment"><h4 class="exp-text">'
-        + sorted_experiments[i + 1].getInfo('name')
-        + '</h4><video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0" onClick="window.location.href=\'res/experiments/exp'
-        + sorted_experiments[i + 1].getInfo('id')
-        + '.html\'" class="prev-vid" muted loop src="res/experiments/exp'
-        + sorted_experiments[i + 1].getInfo('id')
-        + '/res2.mp4"></video></div></td>';
+        for (let j = 0; j < 3; j++) {
+            htmlContent += '<td><div id="exp'
+            + sorted_experiments[i * 3 + j].getInfo('id')
+            + '" class="experiment"><h4 class="exp-text">'
+            + sorted_experiments[i * 3 + j].getInfo('name')
+            + '</h4><video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0" onClick="window.location.href=\'res/experiments/exp'
+            + sorted_experiments[i * 3 + j].getInfo('id')
+            + '/example_exp.html\'" class="prev-vid" muted loop src="res/experiments/exp'
+            + sorted_experiments[i * 3 + j].getInfo('id')
+            + '/res2.mp4"></video></div></td>';
+        }
 
-        htmlContent +=  '<tr>' + '<td><div id="exp'
-        + sorted_experiments[i + 2].getInfo('id')
-        + '" class="experiment"><h4 class="exp-text">'
-        + sorted_experiments[i + 2].getInfo('name')
-        + '</h4><video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0" onClick="window.location.href=\'res/experiments/exp'
-        + sorted_experiments[i + 2].getInfo('id')
-        + '.html\'" class="prev-vid" muted loop src="res/experiments/exp'
-        + sorted_experiments[i + 2].getInfo('id')
-        + '/res2.mp4"></video></div></td>' + '</tr>';
+        htmlContent += '</tr>';
     }
 
-    if ((sorted_experiments % 3) == 1) {
+    if ((sorted_experiments.length % 3) != 0) {
+        htmlContent += '<tr>';
 
+        for (let i = 1; i < (sorted_experiments.length % 3) + 1; i++) {
+            let len = sorted_experiments.length;
+
+            htmlContent += '<td><div id="exp'
+            + sorted_experiments[len - i].getInfo('id')
+            + '" class="experiment"><h4 class="exp-text">'
+            + sorted_experiments[len - i].getInfo('name')
+            + '</h4><video onmouseover="this.play()" onmouseout="this.pause(); this.currentTime=0" onClick="window.location.href=\'res/experiments/exp'
+            + sorted_experiments[len - i].getInfo('id')
+            + '/example_exp.html\'" class="prev-vid" muted loop src="res/experiments/exp'
+            + sorted_experiments[len - i].getInfo('id')
+            + '/res2.mp4"></video></div></td>';
+        }
+
+        htmlContent += '</tr>';
     }
 
-    else if ((sorted_experiments % 3) == 2) {
+    return htmlContent;
+}
 
-    }
-
-    //TODO implement empty experiment to fill <tr>
+function getEmptyExperimentHTML() {
+    return '<td><div class="experiment"><h4 class="exp-text">X</h4></div></td>';
 }

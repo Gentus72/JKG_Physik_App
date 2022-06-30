@@ -3,9 +3,7 @@ Thema:
 
 Mitarbeiter:
 	Gregor
-	Leni
-	Manja
-	Albert
+	
 
 Experimente
 	Zusammenziehen auf Skateboards

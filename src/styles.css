@@ -157,16 +157,14 @@ h4 {
 	margin: 0 auto;
 }*/
 
-@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
-
 h4 {
   position: unset;
   font-size: unset;
   text-align: center;
-  font-family: 'Bowlby One SC', cursive;
-  width: 320px;
-  height: 320px;
-  background: pink;
+  mix-blend-mode: difference;
+  color: white;
+  width: 80%;
+  height: 100%;
   margin: 0 auto;
 }
 

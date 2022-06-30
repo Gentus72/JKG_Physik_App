@@ -4,6 +4,8 @@ Thema:
 Mitarbeiter:
 	Fiona
 	Albert
+	Manja
+	Leni
 
 Experimente:
 	das Ei in der Flasche
